@@ -1,0 +1,124 @@
+:root {
+  --clr-text-dark: hsl(238, 29%, 16%);
+  --clr-text-red: hsl(14, 88%, 65%);
+  --clr-text-very-dark-grayish: hsl(237, 12%, 33%);
+  --clr-text-dark-grayish: hsl(240, 6%, 50%);
+  --clr-text-ligh-grayish: hsl(240, 5%, 91%);
+
+  --font-primary: "Kumbh Sans", sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-primary);
+  background-image: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 12px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0 2rem;
+  padding: 0 1rem;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.card__illustration {
+  display: block;
+  height: 12rem;
+  position: absolute;
+  top: -24%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card__pattern {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card__title {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--clr-text-dark);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__question {
+  color: var(--clr-text-very-dark-grayish);
+  transition: color 100ms ease-in-out;
+}
+
+.card__question:hover {
+  cursor: pointer;
+  color: var(--clr-text-red);
+}
+
+.card__answer {
+  color: var(--clr-text-dark-grayish);
+  margin-top: 0.5rem;
+  width: 90%;
+}
+
+.card__icon {
+  height: 8px;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.card__list {
+  list-style: none;
+}
+
+.card__item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--clr-text-ligh-grayish);
+}
+
+.card__item:last-child {
+  margin-bottom: 0;
+}
+
+.question--active {
+  color: var(--clr-text-dark);
+  font-weight: var(--fw-700);
+}
+
+.hidden {
+  display: none;
+}
+
+.icon--active {
+  transform: rotate(180deg);
+}
